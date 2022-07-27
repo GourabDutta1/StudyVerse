@@ -39,24 +39,29 @@ function writeTutorDetails(name, email, mobile,address,city,state,about_themselv
   })
 }
 
-function writeUserDetails(name, email, mobile,address) {
+function writeStudentDetails(name, email, mobile,address1,address2) {
   database.ref('user_details/').push({
     name: name,
     email: email,
     mobile : mobile,
-    address: address,
-    city: city,
-    state: state,
-
+    address1: address1,
+    address2 : address2,
+  
   }).then((va) => {
     console.log(va.path.pieces_[1])
   })
 }
 
 
+
+
 function getInput(id){
 	return document.getElementById(id).value
 }
+
+
+
+
 
 function submitForm(e){
 	e.preventDefault();
@@ -74,7 +79,8 @@ function submitForm(e){
   var subjects_chosen_for_mentoring = getInput("sub")
   
 
-	writeTutorDetails(name, email, mobile,address,city,state,about_themselves,area_for_tutoring,languages,wbjee_rank,jee_advance_rank,subjects_chosen_for_mentoring)
+
+  writeTutorDetails(name, email, mobile,address,city,state,about_themselves,area_for_tutoring,languages,wbjee_rank,jee_advance_rank,subjects_chosen_for_mentoring)
 }
 
 
@@ -83,8 +89,6 @@ function submitForm(e){
 const form = document.getElementById("tutor_registration_form")
 console.log(form)
 form.addEventListener("submit", submitForm);
-
-
 
 
 

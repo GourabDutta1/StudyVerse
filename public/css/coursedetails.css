@@ -1,10 +1,6 @@
 body{
-    list-style-type: none;
-    
-    background-image: url("bodybackground.jpg");
-    text-align: center;
-    border: 5px ridge gold;
-    border-radius: 1rem  ;
+ background-color: rgb(63, 66, 63);
+ color: white;
     }
     #commited{
     
